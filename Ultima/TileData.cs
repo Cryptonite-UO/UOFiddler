@@ -1419,7 +1419,7 @@ namespace Ultima
                     var b = new byte[20];
                     if (LandTable[i].Name != null)
                     {
-                        byte[] bb = Encoding.ASCII.GetBytes(LandTable[i].Name);
+                        byte[] bb = Encoding.UTF8.GetBytes(LandTable[i].Name);
                         if (bb.Length > 20)
                         {
                             Array.Resize(ref bb, 20);
@@ -1464,7 +1464,7 @@ namespace Ultima
                     var b = new byte[20];
                     if (ItemTable[i].Name != null)
                     {
-                        byte[] bb = Encoding.ASCII.GetBytes(ItemTable[i].Name);
+                        byte[] bb = Encoding.UTF8.GetBytes(ItemTable[i].Name);
                         if (bb.Length > 20)
                         {
                             Array.Resize(ref bb, 20);

@@ -26,7 +26,7 @@ namespace Ultima.Helpers
                 _stringBuffer[count] = *buffer++;
             }
 
-            return Encoding.ASCII.GetString(_stringBuffer, 0, count);
+            return Encoding.UTF8.GetString(_stringBuffer, 0, count);
         }
 
         public static string ReadNameString(byte[] buffer, int len)
@@ -38,7 +38,7 @@ namespace Ultima.Helpers
                 //;
             }
 
-            return Encoding.ASCII.GetString(buffer, 0, count);
+            return Encoding.UTF8.GetString(buffer, 0, count);
         }
 
         public static int ConvertStringToInt(string text)
